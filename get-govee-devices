@@ -1,0 +1,3 @@
+curl -X GET https://developer-api.govee.com/v1/devices \
+	-H "Govee-API-Key: $GOVEE_API_KEY" | json_pp
+	

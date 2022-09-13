@@ -1,0 +1,14 @@
+echo "turning on living room 1";
+curl -X PUT https://developer-api.govee.com/v1/devices/control \
+	-H "Govee-API-Key: $GOVEE_API_KEY" \
+	-H 'Content-Type: application/json' \
+	-d '
+{
+	"device": "'"$GOVEE_LVR_1_MAC_ADDRESS"'",
+	"model": "'"$GOVEE_LVR_1_MODEL"'",
+	"cmd": {
+		"name": "turn",
+		"value": "on"
+	}
+}' \
+| json_pp;
