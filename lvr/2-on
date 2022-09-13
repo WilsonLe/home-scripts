@@ -1,4 +1,7 @@
+#! /bin/bash
+
 echo 'turning on living room 2';
+
 curl -X PUT https://developer-api.govee.com/v1/devices/control \
 	-H "Govee-API-Key: $GOVEE_API_KEY" \
 	-H 'Content-Type: application/json' \
